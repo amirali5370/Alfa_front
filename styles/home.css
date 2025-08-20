@@ -20,86 +20,14 @@
     box-shadow: inset -1px -5px 9px 0px rgba(0, 0, 0, 0.58), 1px -1px 9px 0px rgba(0, 0, 0, 0.58), 1px -1px 9px 0px rgba(0, 0, 0, 0.58);
     position: relative;
 }
-#news{
-    display: flex;
-    flex-direction: column;
-    padding: 40px 0;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to bottom, #87ceeb, #b0e0e6) ;
-}
-#news_co{
-    margin: 15px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.the_nems{
-    width: 600px;
-    height: 600px;
-    background-color: #fff;
-    box-shadow: -1px 11px 40px 0px rgba(0, 0, 0, 0.58),
-    inset 1px -2px 7px 0px rgba(0, 0, 0, 0.58);
-    margin: 0 50px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.5s;
-    cursor: pointer;
-}
-.the_nems:hover{
-    transform: scale(1.05);
-}
-#news_head{
-    font-size: 36px;
-    font-weight: bolder;
-    color: #182c41;
-}
-#news_head>.repeat{
-    font-size: 32px;
-    position: absolute;
-    right: 0;
-}
-.img_news{
-    width: inherit;
-    border-radius: inherit;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    object-fit: cover;
-
-    /* ماسک دایره‌ای با لبه‌های شفاف */
-    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: cover;
-    mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: cover;
-
-    aspect-ratio: 16/9;
-}
-.title_news{
-    font-size: 24px;
-    font-weight: bold;
-    margin: 18px;
-    overflow-wrap: break-word;
-}
-.des_news{
-    align-self: flex-start;
-    margin: 4px 18px;
-    overflow-wrap: break-word;
-}
 #tops{
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
     background-color: #dfe2e6;
-    padding: 20px;
-    padding-bottom: 50px;
+    padding: 0 20px 50px 20px;
+    /* padding-bottom: 50px; */
 }
 #tops_co{
     display: grid;
@@ -142,8 +70,8 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-radius: 170px;
-    width: 170px;
+    border-radius: 150px;
+    width: 150px;
     position: absolute;
     /* top: calc(-170px/2 + 110px); */
     aspect-ratio: 1/1;
@@ -206,4 +134,134 @@
       #000000 16px 32px
     );
     background-size: 40px 40px; /* کنترل ریز‌تر/درشت‌تر بودن راه‌راه‌ها */
+}
+.user_co:last-child{
+    display: none;
+}
+@media only screen and (max-width: 1100px) {
+    .top_img {
+        border-radius: 120px;
+        width: 120px;
+    }
+    #tops_co {
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+    .user_co:last-child{
+        display: flex;
+    }
+    .content_top_user {
+        margin-top: 70px;
+    }
+    .top_name {
+        font-size: 20px;
+    }
+    .top_school, .top_grid {
+        font-size: 18px;
+    }
+    .top_bio{
+        margin-top: 6px;
+    }
+    .top_coin_co{
+        margin-top: 4px;
+    }
+    .top_coin_num {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .top_coin_icon {
+        width: 32px;
+    }
+    .up_top_user{
+        height: 90px;
+    }
+    #tops_head{
+        font-size: 30px;
+        margin: 26px 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .top_img {
+        border-radius: 100px;
+        width: 100px;
+    }
+    #tops_co {
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+    .user_co:last-child{
+        display: none;
+    }
+    .up_top_user{
+        height: 70px;
+    }
+    .content_top_user {
+        margin-top: 75px;
+    }
+    .top_name {
+        font-size: 19px;
+    }
+    .top_school, .top_grid {
+        font-size: 17px;
+    }
+    .top_bio{
+        margin-top: 4px;
+    }
+    .top_coin_num {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .top_coin_icon {
+        width: 30px;
+    }
+    #tops_head{
+        font-size: 26px;
+        margin: 22px 0;
+    }
+    .candy-bar{
+        background: repeating-linear-gradient(
+      -45deg,          /* زاویه خطوط */
+      red 0px,        /* شروع رنگ قرمز */
+      red 10px,       /* پهنای رنگ قرمز */
+      white 10px,     /* شروع رنگ سفید */
+      white 20px      /* پهنای رنگ سفید */);
+    }
+}
+@media only screen and (max-width: 425px) {
+    .top_img {
+        border-radius: 80px;
+        width: 80px;
+    }
+    #tops_co {
+        gap: 15px;
+    }
+    .user_co:nth-last-of-type(-n+3){
+        display: none;
+    }
+    .up_top_user{
+        height: 55px;
+    }
+    .content_top_user {
+        margin-top: 65px;
+    }
+    .top_name {
+        font-size: 16px;
+    }
+    .top_school, .top_grid {
+        font-size: 14px;
+    }
+    .top_bio{
+        margin-top: 2px;
+    }
+    .top_coin_num {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .top_coin_icon {
+        width: 25px;
+    }
+    #tops_head{
+        font-size: 22px;
+        margin: 18px 0;
+    }
 }

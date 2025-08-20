@@ -35,3 +35,11 @@ colorbox.forEach((box, index) => {
     box.style.backgroundColor = shuffledColors[index];
     box.parentNode.style.boxShadow= `0px 0px 15px 0px ${shuffledColors[index]}`
   });
+
+
+
+
+
+
+
+
