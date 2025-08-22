@@ -11,3 +11,8 @@
          url('./fonts/a/LalezarRegular.woff') format('woff'), 
          url('./fonts/a/LalezarRegular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'vazir';
+  src: 
+         url('./fonts/vazir/Vazir.ttf') format('truetype');
+}
